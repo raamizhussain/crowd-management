@@ -1,1 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Safety System - Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>🎯 AI Safety System</h1>
+            <p>Intelligent Crowd Monitoring & Emergency Response</p>
+        </header>
 
+        <!-- Main Dashboard -->
+        <div class="dashboard">
+            <!-- Video Selection Section -->
+            <div class="card">
+                <h2>📂 Video Selection</h2>
+                <div class="video-selector">
+                    <label for="videoDropdown">Select Video for Analysis:</label>
+                    <select id="videoDropdown" class="dropdown">
+                        <option value="">-- Choose a video --</option>
+                        {% for video in videos %}
+                        <option value="{{ video }}">{{ video }}</option>
+                        {% endfor %}
+                    </select>
+                    <button id="selectVideoBtn" class="btn btn-primary">Load Video</button>
+                </div>
+                
+                <!-- Video Info Display -->
+                <div id="videoInfo" class="video-info" style="display: none;">
+                    <h3>📊 Video Information</h3>
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="label">Name:</span>
+                            <span id="videoName">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Duration:</span>
+                            <span id="videoDuration">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">Resolution:</span>
+                            <span id="videoResolution">-</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="label">FPS:</span>
+                            <span id="videoFPS">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- People Detection Section -->
+            <div class="card" id="detectionCard" style="display: none;">
+                <h2>🧍 People Detection & Tracking</h2>
+                
+                <!-- Frame Controls -->
+                <div class="detection-controls">
+                    <div class="frame-control">
+                        <label for="frameSlider">Frame:</label>
+                        <input type="range" id="frameSlider" min="0" max="100" value="0" class="slider">
+                        <span id="frameNumber">0</span> / <span id="totalFrames">0</span>
+                    </div>
+                    <div class="control-buttons">
+                        <button id="processFrameBtn" class="btn btn-success">🔍 Detect People</button>
+                        <button id="playBtn" class="btn btn-info">▶️ Auto Play</button>
+                        <button id="pauseBtn" class="btn btn-warning" style="display: none;">⏸️ Pause</button>
+                    </div>
+                </div>
+
+                <!-- Detection Results -->
+                <div id="detectionResults" class="detection-results" style="display: none;">
+                    <div class="results-header">
+                        <h3>🎯 Detection Results</h3>
+                        <div class="detection-stats">
+                            <span class="stat-item">
+                                <span class="stat-label">People Found:</span>
+                                <span id="peopleCount" class="stat-value">0</span>
+                            </span>
+                        </div>
+                    </div>
+                    
+                    <!-- Processed Frame Display -->
+                    <div class="frame-display">
+                        <img id="processedFrame" src="" alt="Processed Frame" style="display: none;">
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Status -->
+            <div class="card">
+                <h2>🔍 System Status</h2>
+                <div id="systemStatus" class="status-display">
+                    <div class="status-item">
+                        <span class="status-dot pending"></span>
+                        <span>Waiting for video selection...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coming Soon Features -->
+            <div class="card">
+                <h2>🚀 Coming Next</h2>
+                <div class="feature-list">
+                    <div class="feature-item completed">✅ People Detection & Tracking</div>
+                    <div class="feature-item">📊 Crowd Density Estimation</div>
+                    <div class="feature-item">🚨 Anomaly Detection</div>
+                    <div class="feature-item">🔮 Congestion Prediction</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div id="toast" class="toast"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
