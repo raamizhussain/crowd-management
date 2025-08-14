@@ -140,23 +140,6 @@ curl -X POST http://localhost:5000/stop_cctv_stream
 
 ---
 
-## 📊 Results
-Place these under `docs/results/` and reference here:
-- `detection.png` – People detection + IDs + density overlay
-- `heatmap.png` – Heatmap from 3D plane analysis
-- `minimap.png` – Mini‑map with congestion prediction
-- `anomalies.png` – Fire/smoke/fallen alerts
-
-Example (Markdown):
-```markdown
-![Detection](docs/results/detection.png)
-![Heatmap](docs/results/heatmap.png)
-![Mini-map](docs/results/minimap.png)
-![Anomalies](docs/results/anomalies.png)
-```
-
----
-
 ## 🧭 Roadmap / Future Enhancements
 - **Emergency Routing Engine**: dynamic evacuation paths
 - **NLP Command Interface**: voice/text commands for operators
@@ -181,5 +164,6 @@ Add your preferred license (e.g., MIT) in `LICENSE`.
 ## 👤 Author
 **Raamiz Hussain Shikoh**  
 B.Tech Computer Science, SRM Institute of Science and Technology, Kattankulathur
+
 
 
