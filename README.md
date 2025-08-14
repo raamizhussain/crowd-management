@@ -117,7 +117,7 @@ curl -X POST http://localhost:5000/stop_cctv_stream
 
 ---
 
-## 🗂️ Project Structure (suggested)
+## 🗂️ Project Structure
 ```
 .
 ├── app.py
@@ -140,7 +140,7 @@ curl -X POST http://localhost:5000/stop_cctv_stream
 
 ---
 
-## 📊 Results (add screenshots)
+## 📊 Results
 Place these under `docs/results/` and reference here:
 - `detection.png` – People detection + IDs + density overlay
 - `heatmap.png` – Heatmap from 3D plane analysis
@@ -181,4 +181,5 @@ Add your preferred license (e.g., MIT) in `LICENSE`.
 ## 👤 Author
 **Raamiz Hussain Shikoh**  
 B.Tech Computer Science, SRM Institute of Science and Technology, Kattankulathur
+
 
