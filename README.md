@@ -2,6 +2,8 @@
 
 Real-time intelligent surveillance platform for people detection, tracking, density estimation, and anomaly detection (fire, smoke, fallen individuals) with heatmaps (3D plane analysis) and a mini‑map for congestion prediction. Built with **YOLOv8**, **OpenCV**, **Flask**, and **NumPy**.
 
+<img width="1065" height="606" alt="Screenshot 2025-08-14 214439" src="https://github.com/user-attachments/assets/837b7d34-a14d-4908-8550-3889e482b733" />
+
 ---
 
 ## 🔍 Overview
@@ -17,6 +19,8 @@ This project provides a web-based dashboard that ingests CCTV or recorded video,
 - **Mini‑Map + Congestion Prediction**: Top‑down projection with early crowding alerts
 - **Live Dashboard**: Flask APIs streaming annotated frames and JSON analytics
 
+<img width="992" height="595" alt="Screenshot 2025-08-14 213707" src="https://github.com/user-attachments/assets/b89320c7-0f7e-4575-a45f-55c835d11a8d" />
+
 ---
 
 ## 🧱 System Architecture
@@ -29,7 +33,6 @@ This project provides a web-based dashboard that ingests CCTV or recorded video,
 7. **Serve** → Flask endpoints for images + JSON
 8. **Dashboard** → web UI with overlays and alerts
 
-*(Add your architecture diagram image at `docs/architecture.png` and reference it here.)*
 
 ---
 
@@ -178,3 +181,4 @@ Add your preferred license (e.g., MIT) in `LICENSE`.
 ## 👤 Author
 **Raamiz Hussain Shikoh**  
 B.Tech Computer Science, SRM Institute of Science and Technology, Kattankulathur
+
